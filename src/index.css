@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+:root {
+  --min-size: 744px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  min-width: --min-size;
+  min-height: --min-size;
+}
