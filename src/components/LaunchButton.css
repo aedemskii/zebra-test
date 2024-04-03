@@ -1,0 +1,149 @@
+.button {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 136px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  font-size: 25px;
+}
+
+.button.button--active {
+  cursor: pointer;
+}
+
+.button.button--hidden {
+  display: none;
+}
+
+.button.button--active:hover .button__launch,
+.button.button--disabled .button__launch {
+  width: 100%;
+}
+
+.button.button--active:hover .button__launch svg path.svg__path__arrow {
+  opacity: 1;
+}
+
+.button.button--active:hover .button__content,
+.button.button--disabled .button__content {
+  left: 100%;
+}
+
+.button.button--disabled {
+  cursor: default;
+}
+
+.button .button__content__border {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 30px 45px;
+  border: 3px solid #000238;
+  border-radius: inherit;
+  color: rgba(0, 0, 0, 0);
+  position: relative;
+  user-select: none;
+}
+
+.button .button__content {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 30px 45px;
+  border: 3px solid rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #000238;
+  -webkit-transition: left 0.2s linear;
+  -o-transition: left 0.2s linear;
+  -moz-transition: left 0.2s linear;
+  transition: left 0.2s linear;
+  user-select: none;
+}
+
+.button .button__launch {
+  background-color: #2FC4FC;
+  box-sizing: border-box;
+  border-radius: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  -webkit-transition: width 0.2s linear;
+  -o-transition: width 0.2s linear;
+  -moz-transition: width 0.2s linear;
+  transition: width 0.2s linear;
+}
+
+.button .button__launch svg {
+  position: absolute;
+  border-radius: inherit;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  fill: none;
+}
+
+.button .button__launch svg path {
+  stroke: #fff;
+  fill: none;
+}
+
+.button .button__launch svg path.svg__path__arrow {
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  opacity: 0;
+  transition: opacity 0.1s linear;
+}
+
+.button .button__launch svg path.svg__path__stroke {
+  stroke-dasharray: 0 550;
+  stroke-width: 4;
+  transition: stroke-dashoffset 0.3s linear;
+  opacity: 0;
+}
+
+.button .button__launch svg path.svg__path__lightning {
+  stroke-dasharray: 0 50;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  transition: stroke-dashoffset 0.3s linear;
+  opacity: 0;
+}
+
+.button.button--disabled .button__launch svg path.svg__path__stroke {
+  animation: strokeAnimation 0.7s ease-in forwards;
+}
+
+.button.button--disabled .button__launch svg path.svg__path__lightning {
+  animation: lightningAnimation 1.4s ease-out forwards;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes strokeAnimation {
+  from {
+    stroke-dasharray: 0 550;
+    opacity: 1;
+  }
+  to {
+    stroke-dasharray: 550 550;
+    opacity: 1;
+  }
+}
+
+@keyframes lightningAnimation {
+  from {
+    stroke-dasharray: 0 160;
+    opacity: 1;
+  }
+  to {
+    stroke-dasharray: 160 160;
+    opacity: 1;
+  }
+}
