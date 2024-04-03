@@ -3,7 +3,7 @@ import React, { useReducer, useContext } from 'react';
 const AppContext = React.createContext<AppStateContext|null>(null);
 
 export const AppContextProvider = ({ children }: { children: React.ReactNode }) => {
-  const initialAppState: AppState = 'INTRO'
+  const initialAppState: AppState = APP_STATE.NONE;
   const [ state, dispatch ] = useReducer(appStateReducer, initialAppState);
 
   return (
@@ -27,6 +27,8 @@ const appStateReducer = (appState: AppState, action: AppReducerAction): AppState
       return APP_STATE.WINDMILL_SPINNING;
     case APP_REDUCER_ACTION.AWAIT_USER:
       return APP_STATE.AWAITING_USER;
+    case APP_REDUCER_ACTION.PLAY_INTRO:
+      return APP_STATE.INTRO;
     default:
       return appState;
   }
