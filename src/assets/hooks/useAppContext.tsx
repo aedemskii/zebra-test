@@ -3,7 +3,7 @@ import React, { useReducer, useContext } from 'react';
 const AppContext = React.createContext<AppStateContext|null>(null);
 
 export const AppContextProvider = ({ children }: { children: React.ReactNode }) => {
-  const initialAppState: AppState = APP_STATE.AWAITING_USER;
+  const initialAppState: AppState = APP_STATE.INTRO;
   const [ state, dispatch ] = useReducer(appStateReducer, initialAppState);
 
   return (

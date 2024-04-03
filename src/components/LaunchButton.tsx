@@ -9,7 +9,11 @@ import {
   LIGHTNING_PATH,
 } from '../assets/constants';
 import { LaunchButtonProps } from '../assets/types';
-import { useAppContext } from '../assets/hooks/useAppContext';
+import {
+  useAppContext,
+  APP_STATE,
+  APP_REDUCER_ACTION,
+} from '../assets/hooks/useAppContext';
 import './LaunchButton.css';
 
 export const LaunchButton: React.FC<LaunchButtonProps> = ({ text }) => {
@@ -17,12 +21,12 @@ export const LaunchButton: React.FC<LaunchButtonProps> = ({ text }) => {
   const { state, dispatch } = useAppContext();
 
   React.useEffect(() => {
-    if (state === 'INTRO') {
+    if (state === APP_STATE.INTRO) {
       setStatus(BUTTON_STATUS.HIDDEN);
     }
-    else if (state === 'WINDMILL_SPINNING') {
+    else if (state === APP_STATE.WINDMILL_SPINNING) {
       setStatus(BUTTON_STATUS.DISABLED);
-    } else if (state === 'AWAITING_USER') {
+    } else if (state === APP_STATE.AWAITING_USER) {
       setStatus(BUTTON_STATUS.ACTIVE);
     }
   }, [state]);
@@ -31,7 +35,7 @@ export const LaunchButton: React.FC<LaunchButtonProps> = ({ text }) => {
     if (buttonStatus === BUTTON_STATUS.DISABLED) {
       return;
     } else {
-      dispatch({ type: 'SPIN_WINDMILL' });
+      dispatch({ type: APP_REDUCER_ACTION.SPIN_WINDMILL });
     }
   };
 

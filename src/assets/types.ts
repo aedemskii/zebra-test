@@ -7,3 +7,7 @@ export type ButtonStatus = ObjectValues<typeof BUTTON_STATUS>;
 export type LaunchButtonProps = {
   text: string;
 };
+
+export type DynamicTitleProps = {
+  title: string;
+};

@@ -1,4 +1,8 @@
 export const BUTTON_LAUNCH_TEXT = 'Запустить';
+export const DYNAMIC_TITLE_TITLE = 'Развитие\nветроэнергетики\nв России';
+export const _WINDMILLS_PER_2021 = 'ветряка\nза 2021 год';
+export const N_WINDMILLS = 1162;
+export const INTRO_ANIMATION_TIME = 6000;
 
 export const BUTTON_STATUS = {
   ACTIVE: 'ACTIVE',

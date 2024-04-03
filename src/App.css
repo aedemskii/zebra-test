@@ -1,0 +1,11 @@
+.title-n-button-container {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-n-button-container .button {
+  margin-top: 4vh;
+}
