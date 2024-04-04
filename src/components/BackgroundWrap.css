@@ -34,7 +34,7 @@
   animation: moveCloudBig 60s linear infinite;
 }
 
-background-wrap__cloud-small {
+.background-wrap__cloud-small {
   left: -441px;
   width: 441px;
   height: 338px;
