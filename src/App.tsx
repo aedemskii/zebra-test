@@ -12,9 +12,9 @@ const App: React.FC = () => {
 
   return (
     <AppContextProvider>
-      {/* <BackgroundWrap>
+      <BackgroundWrap>
         <Windmill />
-      </BackgroundWrap> */}
+      </BackgroundWrap>
       <WindmillCounter />
       <div className='title-n-button-container'>
         <DynamicTitle title={DYNAMIC_TITLE_TITLE} />

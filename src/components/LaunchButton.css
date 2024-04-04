@@ -15,16 +15,16 @@
   display: none;
 }
 
-.button.button--active:hover .button__launch,
+body.nontouch .button.button--active:hover .button__launch,
 .button.button--disabled .button__launch {
   width: 100%;
 }
 
-.button.button--active:hover .button__launch svg path.svg__path__arrow {
+body.nontouch .button.button--active:hover .button__launch svg path.svg__path__arrow {
   opacity: 1;
 }
 
-.button.button--active:hover .button__content,
+body.nontouch .button.button--active:hover .button__content,
 .button.button--disabled .button__content {
   left: 100%;
 }

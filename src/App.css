@@ -1,11 +1,48 @@
 .title-n-button-container {
   position: absolute;
-  top: 100px;
-  left: 100px;
   display: flex;
   flex-direction: column;
 }
 
 .title-n-button-container .button {
-  margin-top: 4vh;
+  margin-top: 10%;
+}
+
+@media (orientation:portrait) {
+  .title-n-button-container {
+    top: 8.5%;
+    left: 10%;
+  }
+  .windmill-counter {
+    bottom: 20%;
+    left: 10%;
+    text-align: left;
+  }
+  .background-wrap .background-wrap__wave {
+    top: 50%;
+    right: -10%;
+  }
+  .background-wrap .windmill {
+    top: 10%;
+    right: -10%;
+  }
+}
+
+@media (orientation:landscape) {
+  .title-n-button-container {
+    top: 30%;
+    left: 7.5%;
+  }
+  .windmill-counter {
+    top: 10%;
+    right: 10%;
+    text-align: right;
+  }
+  .background-wrap .background-wrap__wave {
+    top: 30%;
+    right: -10%;
+  }
+  .background-wrap .windmill {
+    right: 10%;
+  }
 }

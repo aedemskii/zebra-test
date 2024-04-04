@@ -1,16 +1,19 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-:root {
-  --min-size: 744px;
+#root {
+  position: relative;
   font-family: 'Montserrat Alternates', sans-serif;
-  width: 100vw;
-  height: 100vh;
-  min-width: --min-size;
-  min-height: --min-size;
+  --min-size: 744px;
+  --max-width: 1920px;
+  --max-height: 1384px;
+  min-width: var(--min-size);
+  min-height: var(--min-size);
+  max-width: var(--max-width);
+  max-height: var(--max-height);
+  width: 100dvw;
+  height: 100dvh;
 }

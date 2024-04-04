@@ -1,7 +1,5 @@
 .windmill-counter {
   position: absolute;
-  top: 0;
-  right: 0;
   user-select: none;
 }
 
@@ -9,12 +7,10 @@
   font-size: 140px;
   font-weight: 600;
   color: #2FC4FC;
-  text-align: right;
 }
 
 .windmill-counter .windmill-counter__text {
   font-size: 45px;
   font-weight: 600;
   color: #000238;
-  text-align: left;
 }
