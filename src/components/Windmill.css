@@ -1,0 +1,56 @@
+.windmill {
+  width: 727px;
+  height: 877px;
+  right: 0;
+  position: absolute;
+}
+
+.windmill .windmill__leg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url('../assets/images/windmill-leg.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.windmill .windmill__cap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url('../assets/images/windmill-cap.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.windmill .windmill__blades {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url('../assets/images/windmill-blades.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform-origin: 348px 351px;
+}
+
+.windmill.spinning .windmill__blades {
+  animation: spinBlades 6s ease-in-out forwards;
+}
+
+@keyframes spinBlades {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(7deg);
+  }
+  18% {
+    transform: rotate(7deg);
+  }
+  100% {
+    transform: rotate(-1440deg);
+  }
+}

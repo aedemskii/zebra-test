@@ -3,6 +3,7 @@ import { AppContextProvider } from './assets/hooks/useAppContext'
 import { LaunchButton } from './components/LaunchButton'
 import { DynamicTitle } from './components/DynamicTitle'
 import { WindmillCounter } from './components/WindmillCounter'
+import { Windmill } from './components/Windmill'
 import { BUTTON_LAUNCH_TEXT, DYNAMIC_TITLE_TITLE } from './assets/constants'
 import './App.css'
 
@@ -10,11 +11,12 @@ const App: React.FC = () => {
 
   return (
     <AppContextProvider>
-    <WindmillCounter />
-    <div className='title-n-button-container'>
-      <DynamicTitle title={DYNAMIC_TITLE_TITLE} />
-      <LaunchButton text={BUTTON_LAUNCH_TEXT} />
-    </div>
+      <Windmill />
+      <WindmillCounter />
+      <div className='title-n-button-container'>
+        <DynamicTitle title={DYNAMIC_TITLE_TITLE} />
+        <LaunchButton text={BUTTON_LAUNCH_TEXT} />
+      </div>
     </AppContextProvider>
   )
 }
