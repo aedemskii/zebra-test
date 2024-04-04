@@ -11,3 +11,6 @@ export type LaunchButtonProps = {
 export type DynamicTitleProps = {
   title: string;
 };
+export type ChildComponents = {
+  children: React.ReactNode;
+};

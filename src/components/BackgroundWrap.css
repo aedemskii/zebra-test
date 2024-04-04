@@ -1,0 +1,90 @@
+.background-wrap {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../assets/images/background.png');
+  background-size: 1920px 1384px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+}
+
+.background-wrap__wave {
+  top: 30%;
+  left: -10%;
+  width: 2086px;
+  height: 1050px;
+  position: absolute;
+  background-image: url('../assets/images/wave.png');
+  background-size: 2086px 1050px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transform: rotate(-2.73deg);
+}
+
+.background-wrap__cloud-big {
+  left: -583px;
+  width: 583px;
+  height: 468px;
+  position: absolute;
+  background-image: url('../assets/images/cloud-big.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  animation: moveCloudBig 60s linear infinite;
+}
+
+background-wrap__cloud-small {
+  left: -441px;
+  width: 441px;
+  height: 338px;
+  position: absolute;
+  background-image: url('../assets/images/cloud-small.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  animation: moveCloudSmall 40s linear infinite;
+}
+
+@keyframes moveCloudBig {
+  0% {
+    opacity: 1;
+  }
+  97% {
+    left: 100%;
+    opacity: 1;
+  }
+  98% {
+    left: 100%;
+    opacity: 0;
+  }
+  99% {
+    left: -583px;
+    opacity: 0;
+  }
+  100% {
+    left: -583px;
+    opacity: 1;
+  }
+}
+
+@keyframes moveCloudSmall {
+  0% {
+    opacity: 1;
+  }
+  97% {
+    left: 100%;
+    opacity: 1;
+  }
+  98% {
+    left: 100%;
+    opacity: 0;
+  }
+  99% {
+    left: -441px;
+    opacity: 0;
+  }
+  100% {
+    left: -441px;
+    opacity: 1;
+  }
+}

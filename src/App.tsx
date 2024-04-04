@@ -4,6 +4,7 @@ import { LaunchButton } from './components/LaunchButton'
 import { DynamicTitle } from './components/DynamicTitle'
 import { WindmillCounter } from './components/WindmillCounter'
 import { Windmill } from './components/Windmill'
+import { BackgroundWrap } from './components/BackgroundWrap'
 import { BUTTON_LAUNCH_TEXT, DYNAMIC_TITLE_TITLE } from './assets/constants'
 import './App.css'
 
@@ -11,7 +12,9 @@ const App: React.FC = () => {
 
   return (
     <AppContextProvider>
-      <Windmill />
+      {/* <BackgroundWrap>
+        <Windmill />
+      </BackgroundWrap> */}
       <WindmillCounter />
       <div className='title-n-button-container'>
         <DynamicTitle title={DYNAMIC_TITLE_TITLE} />
